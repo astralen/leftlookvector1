@@ -1,7 +1,6 @@
-local teleportKey = Enum.KeyCode.Z -- клавиша для телепорта
-local distance = 10 -- расстояние для телепорта
+local teleportKey = Enum.KeyCode.Z
+local distance = 10
 
--- функция для телепортирования
 local function teleport()
     local player = game.Players.LocalPlayer
     local character = player.Character
@@ -13,7 +12,6 @@ local function teleport()
     end
 end
 
--- привязываем функцию к событию нажатия клавиши
 game:GetService("UserInputService").InputBegan:Connect(function(input, processed)
     if input.KeyCode == teleportKey and not processed then
         teleport()
